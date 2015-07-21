@@ -9,7 +9,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>RIA杨帆 TASK1</title>
-	<link rel="stylesheet" href="<?php echo $cssUrl?>/mycss.css">
+	<link rel="stylesheet" href="<?php echo $cssUrl?>/backend.css">
 	<link rel="stylesheet" href="<?php echo $cssUrl?>/font-awesome.min.css">
 	<!--虽然CI可以自己加载jQuery类，但是我还是选择用这种路径来加载一下orz-->
 	<script type="text/javascript" src="<?php echo $jsUrl?>/jquery.min.js"></script>
@@ -45,5 +45,30 @@
 			</div>
 		</div>
 	</div>
+	<div class="blacker"></div>
+	<div class="popbox" id="createAlbum">
+		<div class="popboxTitle">
+			<h1>创建相册</h1>
+			<span class="closePop">X</span>
+		</div>
+		<div class="popboxForm">
+			<!--这个表单样式我打算仿一仿bootstrap-->
+			<form class="form-inline">
+				<label for="albumName" class="control-label">相册名</label>
+				<input type="text" name="albumName" id="albumName" placeholder="相册名">
+				<button type="submit">提交</button>
+			</form>
+		</div>
+	</div>
+	<div class="popbox" id="importImg">
+		<div class="popboxTitle">
+			<h1>导入照片</h1>
+			<span class="closePop">X</span>
+		</div>
+		<div class="popboxForm">
+			<!--这个表单样式我打算仿一仿bootstrap-->
+		</div>
+	</div>
+	<script type="text/javascript" src="<?php echo $jsUrl?>/backend.js"></script>
 </body>
 </html>
