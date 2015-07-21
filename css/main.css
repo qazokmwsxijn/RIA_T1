@@ -1,0 +1,152 @@
+body {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei",sans-serif;
+	background-color: #f5f5f5;
+	width: 100%;
+	overflow-x: hidden; 
+}
+
+img {
+	border: 0;
+	margin: 0;
+}
+
+
+
+#display-page {
+	display: none;
+}
+
+
+/* 弹出框 */
+.img-popup {
+	display: none;
+}
+
+.img-popup-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: black;
+	opacity: 0.75;
+	z-index: 3000;
+}
+
+.img-popup-large {
+	z-index: 4000;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-height: 80vh;
+	background-color: white;
+}
+
+.img-popup-close {
+	z-index: 4000;
+	position: fixed;
+	top: 2vh;
+	right: 2vw;
+	width: auto;
+	height: 4.25vh;
+	cursor: pointer;
+}
+
+.img-popup-arrow {
+	z-index: 4000;
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 3.5vw;
+	cursor: pointer;
+}
+
+.img-popup-left {
+	left: 2vw;
+
+}
+
+
+.img-popup-right {
+	right: 2vw;
+}
+
+/*导航栏*/
+.page-header {
+	width: 100vw;
+	height: 40px;
+	background-color: rgb(84, 85, 107);
+}
+
+.page-nav {
+	width: 40vw;
+	height: 40px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.page-nav a {
+	display: inline-block;
+	padding: 0 3vw;
+	height: 40px;
+	line-height: 40px;
+	font-size: 1.25vw;
+	color: #d5d5d5;
+	font-weight: 200;
+	cursor: pointer;
+	text-decoration: none;
+	transition: color 0.25s;
+}
+
+/*.page-nav a:hover {
+	color: white;
+}*/
+
+/*图片展示*/
+.photo-container {
+	width: 62.5vw;
+	padding: 0.5vh 1vw;
+	margin: 0.5vh auto 3vh auto;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	text-align: center;
+}
+
+.photo-container {
+	display: none;
+	opacity: 0;
+	transition: opacity 0.25s;
+	position: relative;
+}
+
+#photo-display .img-wrapper {
+	display: inline-block;
+	float: left;
+	padding: 0.75vh 0.25vw ;
+	/*margin-bottom: 0.5vh;*/
+}
+
+#photo-display .img-wrapper img {
+	display: inline-block;
+	width: 20vw;
+	height: auto;
+	margin-bottom: -3px;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.75);
+	cursor: pointer;
+	transition: box-shadow 0.25s;
+}
+
+#photo-display .img-wrapper img:hover {
+	box-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.9);
+}
+
+
+
+/* 管理页 */
+#manage-page {
+	display: none;
+}
