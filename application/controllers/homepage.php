@@ -22,7 +22,6 @@ class Homepage extends CI_Controller {
 	{
 		$this->load->helper("url");
 		$this->load->view('frontend/index');
-		#$this->load->view('backend/manage');
 	}
 	public function backend() {
 		$this->load->helper("url");

@@ -69,6 +69,6 @@
 			<!--这个表单样式我打算仿一仿bootstrap-->
 		</div>
 	</div>
-	<script type="text/javascript" src="<?php echo $jsUrl?>/backend.js"></script>
+	<script type="text/javascript" src="<?php echo $jsUrl?>/backendUI.js"></script>
 </body>
 </html>

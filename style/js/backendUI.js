@@ -35,7 +35,16 @@
 			$(this).parents(".popbox").hide().siblings(".blacker").hide();
 		})
 	}
-
+	//渲染图片，data由controller.js来传递
+	UI.renderImg = function(data) {
+		//
+		//鼠标点击后通过ajax更新重新渲染页面 || 拖动图片时hover经过某个nav时ajax更新渲染页面
+	}
+	//拖动效果
+	UI.imgDrag = function(ele) {
+		//
+	}
+	
 	UI.popbox(['createAlbumBtn', 'createAlbum'], ['importImgBtn', 'importImg']);
 	UI.hide();
 })()
