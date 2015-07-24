@@ -70,5 +70,6 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="<?php echo $jsUrl?>/backendUI.js"></script>
+	<script type="text/javascript" src="<?php echo $jsUrl?>/backendController.js"></script>
 </body>
 </html>
