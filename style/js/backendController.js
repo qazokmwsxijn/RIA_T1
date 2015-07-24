@@ -19,6 +19,8 @@
 
 	//查询图片和查询分类
 	Controller.getImg = function() {
+		//这个地方传给我后台的typeid我说一下，全部的typeid统一为all，然后各个分类的typeid在getType的方法里面已经获得
+		//了，你们把typeid保存到dom里面，然后引用这个接口的时候记得post就好……注意一定得是post啊-。-
 		$.post("../Img/getImg", {typeid: 2}, function(data) {
 			console.log(JSON.parse(data));
 		})
