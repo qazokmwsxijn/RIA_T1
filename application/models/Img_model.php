@@ -22,4 +22,26 @@ class Img_model extends CI_Model {
 		$res = $this->db->get_where('imglink', array('typeid' => $typeid));
 		return count($res->result_array());
 	}
+
+	public function addType($typename) {
+		return $this->db->insert("type", array('type' => $typename));
+	}
+
+	public function deleteImg($imgid) {
+		return $this->db->delete('imglink', array('imgid' => $imgid));
+	}
+
+	public function deleteType($typeid) {
+		return $this->db->delete('type', array('typeid' => $typeid));
+	}
+
+	public function editType($typeid, $type) {
+		$this->db->where("typeid", $typeid);
+		return $this->db->update('type', array('type' => $type));
+	}
+
+	public function editImg($imgid, $imgname) {
+		$this->db->where('imgid', $imgid);
+		return $this->db->update('imglink', array('imgname' => $imgname));
+	}
 }
