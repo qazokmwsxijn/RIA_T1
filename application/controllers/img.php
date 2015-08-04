@@ -49,4 +49,30 @@ class Img extends CI_Controller {
 		$imgname = $this->input->post('imgname', true);
 		echo $this->img_model->editImg($imgid, $imgname);
 	}
+
+	//图片上传文件处理函数
+	public function uploadImg() {
+		$config['upload_path'] = './upload/';
+		$config['allowed_types'] = 'jpg|jpeg|bmp|png';
+		$config['max_size'] = 100 * 1024 * 1024;
+		$this->load->library('upload', $config);
+		foreach ($_FILES as $key => $value) {
+			if (!empty($value['name'])) {
+				if (!$this->upload->do_upload($key))
+					print_r($this->upload->display_errors());
+				else
+					echo 1;
+			}
+		}
+	}
+
+	//图片信息存储函数
+	public function addImg() {
+		$data = array(
+			'imgname' => $this->input->post('imgname'),
+			'typeid' => $this->input->post('typeid'),
+			'url' => $this->input->post('url')
+		)
+		$this->img_model->addImg($data);
+	}
 }

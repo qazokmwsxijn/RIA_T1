@@ -139,5 +139,4 @@
 	}
 
 	Controller.init();
-
 })()

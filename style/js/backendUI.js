@@ -65,6 +65,7 @@
 	//渲染图片，data由controller.js来传递
 	UI.renderImg = function(data) {
 		var str = [];
+		//根据sequence排序
 		data = data.sort(by('sequence'));
 		for (var i = 0; i < data.length; i ++) {
 			str.push("<div class='imgShow hoverEffect' draggable=true data-index='" + data[i]['sequence'] +"' code='" + data[i]['imgid'] + "'>");
@@ -77,7 +78,6 @@
 		$("#imgList").html(str.join(''));
 		//鼠标点击后通过ajax更新重新渲染页面 || 拖动图片时hover经过某个nav时ajax更新渲染页面
 	}
-	//排列图片
 	//渲染分类
 	UI.renderType = function(data) {
 		var str = [], count = 0;

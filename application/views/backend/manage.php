@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="<?php echo $cssUrl?>/webuploader.css">
 	<!--虽然CI可以自己加载jQuery类，但是我还是选择用这种路径来加载一下orz-->
 	<script type="text/javascript" src="<?php echo $jsUrl?>/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo $jsUrl?>/webuploader.min.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -28,9 +29,6 @@
 			</div>
 			<div id="sideNavList">
 				<ul class="sideNavUl">
-					<li>全部<span class="classNum">(11)</span></li>
-					<li>风景<span class="classNum">(5)</span><!--div class="classOptionIcon"><i class="fa fa-pencil classEditIcon"></i><i class="fa fa-times classDeleteIcon"></i></div--></li>
-					<li>人物<span class="classNum">(6)</span></li>
 				</ul>
 			</div>
 		</div>
@@ -39,13 +37,6 @@
 				<p>导入图片</p>
 			</div>
 			<div id="imgList">
-				<div class="imgShow">
-					<div class="imgShowContent">
-						<div class="imgLink"></div>
-						<div class="imgName">hhh</div>
-						<div class="imgOption">···</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -101,16 +92,12 @@
 			<span class="closePop">X</span>
 		</div>
 		<div class="popboxForm">
-			<div id="filePicker" class="webuploader-container">
-				<div class="webuploader-pick">选择图片</div>
-					<div id="rt_rt_19r2vdhmlr0m7t81gqt12e31ttm4" style="position: absolute; top: 0px; left: 0px; width: 94px; height: 44px; overflow: hidden; bottom: auto; right: auto;">
-						<input class="webuploader-element-invisible" type="file" name="file" multiple="multiple" accept="image/*">
-					<label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"></label>
-				</div>
-			</div>
+			<div id="fileList" class="uploader-list"></div>
+			<div id="filePicker">选择图片</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="<?php echo $jsUrl?>/backendUI.js"></script>
 	<script type="text/javascript" src="<?php echo $jsUrl?>/backendController.js"></script>
+	<script type="text/javascript" src="<?php echo $jsUrl?>/backendImgUploader.js"></script>
 </body>
 </html>
